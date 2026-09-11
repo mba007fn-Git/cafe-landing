@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ORIGIN CAFE</title>
+<style>
+  :root {
+    --cream: #f6f1e9;
+    --brown-dark: #3a2a1e;
+    --brown: #6f4e37;
+    --accent: #c98a4b;
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Georgia', 'Apple SD Gothic Neo', sans-serif;
+    background: var(--cream);
+    color: var(--brown-dark);
+    line-height: 1.6;
+  }
+  a { text-decoration: none; color: inherit; }
+
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(246, 241, 233, 0.9);
+    backdrop-filter: blur(6px);
+    z-index: 100;
+  }
+  .logo { font-size: 22px; font-weight: bold; letter-spacing: 2px; }
+  nav ul { display: flex; list-style: none; gap: 30px; }
+  nav a { font-size: 14px; letter-spacing: 1px; }
+  nav a:hover { color: var(--accent); }
+
+  .hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(58,42,30,0.55), rgba(58,42,30,0.55)),
+                url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    color: var(--white);
+    padding: 0 20px;
+  }
+  .hero h1 {
+    font-size: 56px;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+  }
+  .btn {
+    display: inline-block;
+    padding: 14px 34px;
+    background: var(--accent);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+  }
+  .btn:hover { background: #b3733a; }
+
+  section { padding: 90px 20px; max-width: 1100px; margin: 0 auto; }
+  .section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+  .section-sub {
+    text-align: center;
+    color: var(--brown);
+    margin-bottom: 50px;
+    font-size: 15px;
+  }
+
+  .about { display: flex; align-items: center; gap: 60px; flex-wrap: wrap; }
+  .about img {
+    flex: 1 1 400px;
+    max-width: 480px;
+    border-radius: 8px;
+    width: 100%;
+  }
+  .about-text { flex: 1 1 300px; }
+  .about-text h2 { font-size: 30px; margin-bottom: 20px; }
+  .about-text p { color: var(--brown); }
+
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+  }
+  .menu-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(58,42,30,0.08);
+    transition: transform 0.3s;
+  }
+  .menu-card:hover { transform: translateY(-6px); }
+  .menu-card img { width: 100%; height: 200px; object-fit: cover; }
+  .menu-card-body { padding: 20px; }
+  .menu-card-body h3 { margin-bottom: 6px; font-size: 18px; }
+  .menu-card-body p { color: var(--brown); font-size: 14px; margin-bottom: 10px; }
+  .price { color: var(--accent); font-weight: bold; }
+
+  .contact {
+    background: var(--brown-dark);
+    color: var(--white);
+    text-align: center;
+  }
+  .contact h2 { font-size: 30px; margin-bottom: 20px; }
+  .contact p { margin-bottom: 6px; opacity: 0.9; }
+
+  footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 13px;
+    color: var(--brown);
+    background: var(--cream);
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 36px; }
+    header { padding: 16px 20px; }
+    nav ul { gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">ORIGIN CAFE</div>
+    <nav>
+      <ul>
+        <li><a href="#about">소개</a></li>
+        <li><a href="#menu">메뉴</a></li>
+        <li><a href="#contact">오시는 길</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>ORIGIN CAFE</h1>
+    <p>매일 아침, 정성으로 내린 커피 한 잔</p>
+    <a href="#menu" class="btn">메뉴 보기</a>
+  </section>
+
+  <section class="about" id="about">
+    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="카페 내부">
+    <div class="about-text">
+      <h2>우리 카페 이야기</h2>
+      <p>
+        ORIGIN CAFE는 좋은 원두와 편안한 공간을 만드는 곳입니다.
+        직접 로스팅한 원두로 매일 신선한 커피를 내리고,
+        누구나 편하게 머물 수 있는 분위기를 만들고 있습니다.
+      </p>
+    </div>
+  </section>
+
+  <section id="menu">
+    <h2 class="section-title">메뉴</h2>
+    <p class="section-sub">인기 있는 메뉴를 소개합니다</p>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=500&q=80" alt="아메리카노">
+        <div class="menu-card-body">
+          <h3>아메리카노</h3>
+          <p>깔끔하고 진한 에스프레소</p>
+          <span class="price">4,500원</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=500&q=80" alt="카페라떼">
+        <div class="menu-card-body">
+          <h3>카페라떼</h3>
+          <p>부드러운 우유와 에스프레소</p>
+          <span class="price">5,000원</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1608649571459-83c19f1e7d3f?auto=format&fit=crop&w=500&q=80" alt="크로플">
+        <div class="menu-card-body">
+          <h3>크로플</h3>
+          <p>바삭한 크로플과 아이스크림</p>
+          <span class="price">6,500원</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>오시는 길</h2>
+    <p>서울시 어딘가 카페거리 12-3</p>
+    <p>매일 09:00 - 21:00</p>
+    <p>070-1234-5678</p>
+  </section>
+
+  <footer>
+    &copy; 2026 ORIGIN CAFE. All rights reserved.
+  </footer>
+
+</body>
+</html>
