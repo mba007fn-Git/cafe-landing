@@ -114,6 +114,19 @@
   .menu-card-body p { color: var(--brown); font-size: 14px; margin-bottom: 10px; }
   .price { color: var(--accent); font-weight: bold; }
 
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 30px;
+  }
+  .stat-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(58,42,30,0.08);
+  }
+  .stat-card img { width: 100%; height: auto; display: block; }
+
   .contact {
     background: var(--brown-dark);
     color: var(--white);
@@ -145,6 +158,7 @@
       <ul>
         <li><a href="#about">소개</a></li>
         <li><a href="#menu">메뉴</a></li>
+        <li><a href="#stats">통계</a></li>
         <li><a href="#contact">오시는 길</a></li>
       </ul>
     </nav>
@@ -195,6 +209,19 @@
           <p>바삭한 크로플과 아이스크림</p>
           <span class="price">6,500원</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stats">
+    <h2 class="section-title">한눈에 보는 카페 통계</h2>
+    <p class="section-sub">예시 데이터로 만든 그래프예요</p>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <img src="charts/menu-popularity.svg" alt="인기 메뉴 판매 비율 막대그래프">
+      </div>
+      <div class="stat-card">
+        <img src="charts/visitor-trend.svg" alt="월별 방문객 추이 꺾은선 그래프">
       </div>
     </div>
   </section>

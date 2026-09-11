@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메뉴 인기도</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@400&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper:   #f6f1e9;
+      --color-ink:     #3a2a1e;
+      --color-muted:   #6f4e37;
+      --color-accent:  #c98a4b;
+      --font-sans:     'Geist', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+      --font-serif:    'Instrument Serif', 'Noto Serif KR', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+    .frame { max-width: 1000px; width: 100%; }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--color-ink);
+      margin-bottom: 1.5rem;
+    }
+    svg { width: 100%; min-width: 900px; display: block; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Bar Chart · ORIGIN CAFE</p>
+    <h1>인기 메뉴 판매 비율</h1>
+
+    <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="menu-popularity-title menu-popularity-desc">
+      <title id="menu-popularity-title">인기 메뉴 판매 비율</title>
+      <desc id="menu-popularity-desc">전체 주문 중 아메리카노가 42%로 가장 인기 있고, 카페라떼 35%, 크로플 23%가 뒤를 잇는 것을 보여주는 막대그래프(예시 데이터)입니다.</desc>
+      <defs></defs>
+
+      <rect width="100%" height="100%" fill="#f6f1e9"/>
+
+      <!-- gridlines: domain 0-50, step 10 -->
+      <line x1="80" y1="420" x2="960" y2="420" stroke="rgba(58,42,30,0.08)" stroke-width="0.8"/>
+      <line x1="80" y1="344" x2="960" y2="344" stroke="rgba(58,42,30,0.08)" stroke-width="0.8"/>
+      <line x1="80" y1="268" x2="960" y2="268" stroke="rgba(58,42,30,0.08)" stroke-width="0.8"/>
+      <line x1="80" y1="192" x2="960" y2="192" stroke="rgba(58,42,30,0.08)" stroke-width="0.8"/>
+      <line x1="80" y1="116" x2="960" y2="116" stroke="rgba(58,42,30,0.08)" stroke-width="0.8"/>
+      <line x1="80" y1="40"  x2="960" y2="40"  stroke="rgba(58,42,30,0.08)" stroke-width="0.8"/>
+
+      <!-- y-axis labels -->
+      <text x="72" y="424" fill="#6f4e37" font-size="8" font-family="'Geist Mono', monospace" text-anchor="end">0</text>
+      <text x="72" y="348" fill="#6f4e37" font-size="8" font-family="'Geist Mono', monospace" text-anchor="end">10</text>
+      <text x="72" y="272" fill="#6f4e37" font-size="8" font-family="'Geist Mono', monospace" text-anchor="end">20</text>
+      <text x="72" y="196" fill="#6f4e37" font-size="8" font-family="'Geist Mono', monospace" text-anchor="end">30</text>
+      <text x="72" y="120" fill="#6f4e37" font-size="8" font-family="'Geist Mono', monospace" text-anchor="end">40</text>
+      <text x="72" y="44"  fill="#6f4e37" font-size="8" font-family="'Geist Mono', monospace" text-anchor="end">50</text>
+
+      <!-- axis baseline -->
+      <line x1="80" y1="420" x2="960" y2="420" stroke="rgba(58,42,30,0.25)" stroke-width="1"/>
+      <line x1="80" y1="40"  x2="80"  y2="420" stroke="rgba(58,42,30,0.25)" stroke-width="1"/>
+
+      <!-- Bar 1: 아메리카노 42% (focal) -->
+      <rect x="100" y="101" width="160" height="319" fill="#f6f1e9"/>
+      <rect x="100" y="101" width="160" height="319" fill="rgba(201,138,75,0.12)" stroke="#c98a4b" stroke-width="1"/>
+      <text x="180" y="89" fill="#c98a4b" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">42%</text>
+      <text x="180" y="440" fill="#3a2a1e" font-size="11" font-weight="600" font-family="'Geist','Noto Sans KR',sans-serif" text-anchor="middle">아메리카노</text>
+
+      <!-- Bar 2: 카페라떼 35% -->
+      <rect x="380" y="154" width="160" height="266" fill="#f6f1e9"/>
+      <rect x="380" y="154" width="160" height="266" fill="rgba(111,78,55,0.12)" stroke="#6f4e37" stroke-width="1"/>
+      <text x="460" y="142" fill="#6f4e37" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">35%</text>
+      <text x="460" y="440" fill="#3a2a1e" font-size="11" font-weight="600" font-family="'Geist','Noto Sans KR',sans-serif" text-anchor="middle">카페라떼</text>
+
+      <!-- Bar 3: 크로플 23% -->
+      <rect x="660" y="245" width="160" height="175" fill="#f6f1e9"/>
+      <rect x="660" y="245" width="160" height="175" fill="rgba(111,78,55,0.12)" stroke="#6f4e37" stroke-width="1"/>
+      <text x="740" y="233" fill="#6f4e37" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">23%</text>
+      <text x="740" y="440" fill="#3a2a1e" font-size="11" font-weight="600" font-family="'Geist','Noto Sans KR',sans-serif" text-anchor="middle">크로플</text>
+
+      <!-- legend -->
+      <line x1="80" y1="462" x2="960" y2="462" stroke="rgba(58,42,30,0.10)" stroke-width="0.8"/>
+      <text x="80" y="478" fill="#6f4e37" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.14em">LEGEND</text>
+      <rect x="80" y="488" width="16" height="8" rx="2" fill="rgba(201,138,75,0.12)" stroke="#c98a4b" stroke-width="1"/>
+      <text x="104" y="496" fill="#3a2a1e" font-size="11" font-family="'Geist','Noto Sans KR',sans-serif">1위 메뉴</text>
+      <rect x="220" y="488" width="16" height="8" rx="2" fill="rgba(111,78,55,0.12)" stroke="#6f4e37" stroke-width="1"/>
+      <text x="244" y="496" fill="#3a2a1e" font-size="11" font-family="'Geist','Noto Sans KR',sans-serif">그 외 메뉴</text>
+    </svg>
+  </div>
+</body>
+</html>

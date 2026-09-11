@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="visitor-trend-title visitor-trend-desc">
+      <title id="visitor-trend-title">월별 방문객 추이</title>
+      <desc id="visitor-trend-desc">1월 320명에서 6월 590명까지 전반적으로 늘어나는 월별 방문객 수 추이를 보여주는 꺾은선 그래프(예시 데이터)입니다.</desc>
+      <defs><style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;family=Noto+Sans+KR:wght@400;500;600&amp;family=Noto+Serif+KR:wght@400&amp;family=Noto+Sans+TC:wght@400;500;600&amp;family=Noto+Serif+TC:wght@400&amp;display=swap');</style></defs>
+
+      <rect width="100%" height="100%" fill="#f6f1e9"/>
+
+      <!-- gridlines: domain 0-600, step 120 -->
+      <line x1="80" y1="420" x2="960" y2="420" stroke="#3a2a1e" stroke-opacity="0.08" stroke-width="0.8"/>
+      <line x1="80" y1="344" x2="960" y2="344" stroke="#3a2a1e" stroke-opacity="0.08" stroke-width="0.8"/>
+      <line x1="80" y1="268" x2="960" y2="268" stroke="#3a2a1e" stroke-opacity="0.08" stroke-width="0.8"/>
+      <line x1="80" y1="192" x2="960" y2="192" stroke="#3a2a1e" stroke-opacity="0.08" stroke-width="0.8"/>
+      <line x1="80" y1="116" x2="960" y2="116" stroke="#3a2a1e" stroke-opacity="0.08" stroke-width="0.8"/>
+      <line x1="80" y1="40"  x2="960" y2="40"  stroke="#3a2a1e" stroke-opacity="0.08" stroke-width="0.8"/>
+
+      <!-- y-axis labels -->
+      <text x="72" y="424" fill="#6f4e37" font-size="8" font-family="'Geist Mono', monospace" text-anchor="end">0</text>
+      <text x="72" y="348" fill="#6f4e37" font-size="8" font-family="'Geist Mono', monospace" text-anchor="end">120</text>
+      <text x="72" y="272" fill="#6f4e37" font-size="8" font-family="'Geist Mono', monospace" text-anchor="end">240</text>
+      <text x="72" y="196" fill="#6f4e37" font-size="8" font-family="'Geist Mono', monospace" text-anchor="end">360</text>
+      <text x="72" y="120" fill="#6f4e37" font-size="8" font-family="'Geist Mono', monospace" text-anchor="end">480</text>
+      <text x="72" y="44"  fill="#6f4e37" font-size="8" font-family="'Geist Mono', monospace" text-anchor="end">600</text>
+
+      <!-- axis baseline -->
+      <line x1="80" y1="420" x2="960" y2="420" stroke="#3a2a1e" stroke-opacity="0.25" stroke-width="1"/>
+      <line x1="80" y1="40"  x2="80"  y2="420" stroke="#3a2a1e" stroke-opacity="0.25" stroke-width="1"/>
+
+      <!-- focal series line -->
+      <polyline points="80,217 256,160 432,179 608,129 784,97 960,46"
+                fill="none" stroke="#c98a4b" stroke-width="1.8" stroke-linejoin="round"/>
+
+      <!-- vertex dots + value labels -->
+      <circle cx="80"  cy="217" r="4" fill="#c98a4b"/>
+      <rect x="60" y="197" width="40" height="12" rx="2" fill="#f6f1e9"/>
+      <text x="80" y="206" fill="#c98a4b" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">320</text>
+
+      <circle cx="256" cy="160" r="4" fill="#c98a4b"/>
+      <rect x="236" y="140" width="40" height="12" rx="2" fill="#f6f1e9"/>
+      <text x="256" y="149" fill="#c98a4b" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">410</text>
+
+      <circle cx="432" cy="179" r="4" fill="#c98a4b"/>
+      <rect x="412" y="159" width="40" height="12" rx="2" fill="#f6f1e9"/>
+      <text x="432" y="168" fill="#c98a4b" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">380</text>
+
+      <circle cx="608" cy="129" r="4" fill="#c98a4b"/>
+      <rect x="588" y="109" width="40" height="12" rx="2" fill="#f6f1e9"/>
+      <text x="608" y="118" fill="#c98a4b" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">460</text>
+
+      <circle cx="784" cy="97"  r="4" fill="#c98a4b"/>
+      <rect x="764" y="77" width="40" height="12" rx="2" fill="#f6f1e9"/>
+      <text x="784" y="86" fill="#c98a4b" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">510</text>
+
+      <circle cx="960" cy="46"  r="4" fill="#c98a4b"/>
+      <rect x="920" y="26" width="40" height="12" rx="2" fill="#f6f1e9"/>
+      <text x="940" y="35" fill="#c98a4b" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">590</text>
+
+      <!-- x-axis month labels (Korean → 12px sans, register switch) -->
+      <text x="80"  y="440" fill="#3a2a1e" font-size="12" font-weight="500" font-family="'Geist','Noto Sans KR',sans-serif" text-anchor="middle">1월</text>
+      <text x="256" y="440" fill="#3a2a1e" font-size="12" font-weight="500" font-family="'Geist','Noto Sans KR',sans-serif" text-anchor="middle">2월</text>
+      <text x="432" y="440" fill="#3a2a1e" font-size="12" font-weight="500" font-family="'Geist','Noto Sans KR',sans-serif" text-anchor="middle">3월</text>
+      <text x="608" y="440" fill="#3a2a1e" font-size="12" font-weight="500" font-family="'Geist','Noto Sans KR',sans-serif" text-anchor="middle">4월</text>
+      <text x="784" y="440" fill="#3a2a1e" font-size="12" font-weight="500" font-family="'Geist','Noto Sans KR',sans-serif" text-anchor="middle">5월</text>
+      <text x="960" y="440" fill="#3a2a1e" font-size="12" font-weight="500" font-family="'Geist','Noto Sans KR',sans-serif" text-anchor="middle">6월</text>
+    </svg>
